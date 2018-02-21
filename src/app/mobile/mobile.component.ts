@@ -26,4 +26,11 @@ export class MobileComponent implements OnInit {
     })
   }
 
+  deleteMobile(mobileId){
+    this._mobileService.deleteMobile(mobileId)
+    .subscribe( res => {
+      this._route.navigateByUrl('/');
+    })
+  }
+
 }
