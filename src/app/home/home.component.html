@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-xs-12">
+    <a routerLink='/create' class="btn btn-default pull-right">Cadastrar novo celular</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <hr/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 col-md-2" *ngFor='let mobile of mobiles'>
+    <div class="thumbnail">
+      <img src="{{mobile.photo}}" alt="{{mobile.model}}">
+      <div class="caption">
+        <h3>{{mobile.model}}</h3>
+        <table class="table">
+          <tr>
+            <th>
+              Price
+            </th>
+            <td>
+              {{mobile.price}}
+            </td>
+          </tr>
+
+        </table>
+        <p>
+          <a class="btn btn-primary" routerLink="mobile/{{mobile.code}}">Ver detalhes</a>
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</div>
